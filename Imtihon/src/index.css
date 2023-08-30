@@ -1,0 +1,87 @@
+@import url(https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;500;600;800;900&display=swap);
+
+*,::after,::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+ 
+}
+
+
+main{
+  flex-grow: 1;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+body {
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: column;
+  color: darkslategrey;
+  font-weight: 400;
+  font-size: 16px;
+  
+}
+.use {
+  display: grid;
+  grid-template-columns: repeat( 4, minmax(250px, 1fr) );
+  gap: 24px;
+}
+
+/* .container {
+  width: 100%;
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-right: 30px;
+  margin-left: 30px;
+} */
+
+img {
+  object-fit: cover;
+  display: flex;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.darkMode {
+  background-color: #202c36;
+  color: #fff;
+}
+@media screen and (max-width:1000px){
+  .use {
+    .use {
+      display: grid;
+      grid-template-columns: repeat( 1, minmax(250px, 1fr) );
+      gap: 24px;
+    }
+  }
+}
